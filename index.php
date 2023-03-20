@@ -98,9 +98,7 @@ $stmt->execute();
                                 <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Excluir</button>
                             </div>
                         </div>
                         </div>
@@ -113,8 +111,9 @@ $stmt->execute();
                                 <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Excluir</button>
                                 </div>
-                                <small class="text-muted">9 mins</small>
+                               
                             </div>
                             </div>
                         </div>
@@ -129,8 +128,9 @@ $stmt->execute();
                                 <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Excluir</button>
                                 </div>
-                                <small class="text-muted">9 mins</small>
+                                
                             </div>
                             </div>
                         </div>
@@ -144,8 +144,9 @@ $stmt->execute();
                                 <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Excluir</button>
                                 </div>
-                                <small class="text-muted">9 mins</small>
+                                
                             </div>
                             </div>
                         </div>
@@ -159,8 +160,9 @@ $stmt->execute();
                                 <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Excluir</button>
                                 </div>
-                                <small class="text-muted">9 mins</small>
+                                
                             </div>
                             </div>
                         </div>
@@ -175,8 +177,9 @@ $stmt->execute();
                                 <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Excluir</button>
                                 </div>
-                                <small class="text-muted">9 mins</small>
+                                
                             </div>
                             </div>
                         </div>
@@ -190,8 +193,9 @@ $stmt->execute();
                                 <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Excluir</button>
                                 </div>
-                                <small class="text-muted">9 mins</small>
+                                
                             </div>
                             </div>
                         </div>
@@ -205,8 +209,9 @@ $stmt->execute();
                                 <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Excluir</button>
                                 </div>
-                                <small class="text-muted">9 mins</small>
+                                
                             </div>
                             </div>
                         </div>
