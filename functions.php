@@ -6,30 +6,4 @@ function db_connect()
 
     return $PDO;
 }
-
-function dateConvert($date)
-{
-
-    if ( ! strstr( $date, '/') )
-    {
-        $dataCorrigida = implode('/', array_reverse(explode('-', $date)));
-
-    }
-    else
-    {
-        $dataCorrigida = implode('-', array_reverse(explode('/',$date)));
-
-    }
-
-    return $dataCorrigida;
-
-}
-
-function calculateAge($birthdate)
-{
-    $now = new DateTime() ;
-    $diff = $now->diff(new DateTime($birthdate));
-
-    return $diff->y;
-}
 ?>

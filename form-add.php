@@ -34,4 +34,8 @@ require 'init.php';
             <label for="qtd">Quantidade de músicas: </label>
             <input type="text"  class="form-control col-sm" name="qtd" id="qtd" style="widht:25%;" placeholder="Informe o nome do álbum">
         </div>
+        <button type="submit" class="btn btn-primary"><Cadastrar</button>
+    </div>
+    </body>
+</html>
             
