@@ -15,13 +15,8 @@ $stmt->execute();
     <head>
         <meta charset="utf-8">
         <title>Acervo de discos</title>
-        <link href="boostrap/css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
         <script src="bootstrap/js/bootstrap.js"></script>
-        <style type="text/css">
-            .container{
-                margin-top: 50px;
-                margin-left: 100px;
-            }
         </style>
         </head>
         <body>
@@ -36,33 +31,31 @@ $stmt->execute();
                     </p>
                     </div>
                 </section>
-
+                <?php while ($user = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
                 <div class="album py-5 bg-light">
                     <div class="container">
-
-                    <div class="row">
-                        <?php while ($user = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
-                        <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <div class="card-body">
-                            <p class="card-text">
-                                <?php echo $user['name'] ?></br>
-                                <?php echo $user['titulo'] ?></br>
-                                <?php echo $user['estilo'] ?></br>
-                                <?php echo $user['qtd'] ?></br>
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                <a href="form-edit.php?id=<?php echo $user['id'] ?>" class="btn btn-sm btn-outline-secondary">Editar</a>
-                                <a href="delete.php?id=<?php echo $user['id'] ?>" class="btn btn-sm btn-outline-secondary">Excluir</a>
-                            </div>
-                        <?php endwhile; ?>
-                        </div>
+                                <div class="row">
+                            <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                <p class="card-text">
+                                    Nome da Banda/ Cantor: <?php echo $user['name'] ?><br>
+                                    Título do Álbum: <?php echo $user['titulo'] ?><br>
+                                    Estilo: <?php echo $user['estilo'] ?><br>
+                                    Quantidade de Músicas: <?php echo $user['qtd'] ?><br>
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                    <a href="form-edit.php?id=<?php echo $user['id'] ?>" class="btn btn-sm btn-outline-secondary">Editar</a>
+                                    <a href="delete.php?id=<?php echo $user['id'] ?>" class="btn btn-sm btn-outline-secondary">Excluir</a>
+                                </div>
+                                </div>
+                        
                         </div>
                     </div>
                     </div>
                 </div>
-
+                <?php endwhile; ?>
                 </main>
 
                 <footer class="text-muted">
