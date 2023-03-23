@@ -6,7 +6,7 @@ require 'init.php';
     <head>
         <meta charset="utf-8">
         <title>Acervo de discos</title>
-        <link href="boostrap/css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
         <script src="bootstrap/js/bootstrap.js"></script>
     </head>
     <body>
@@ -34,7 +34,7 @@ require 'init.php';
             <label for="qtd">Quantidade de músicas: </label>
             <input type="text"  class="form-control col-sm" name="qtd" id="qtd" style="widht:25%;" placeholder="Informe o nome do álbum">
         </div>
-        <button type="submit" class="btn btn-primary"><Cadastrar</button>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>
     </body>
 </html>
