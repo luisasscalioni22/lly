@@ -22,7 +22,7 @@ require 'init.php';
 
         <div class="form-group">
             <label for="album">Título do álbum: </label>
-            <input type="text"  class="form-control col-sm" name="album" id="album" style="widht:25%;" placeholder="Informe o nome do álbum">
+            <input type="text"  class="form-control col-sm" name="album" id="album" style="widht:25%;" placeholder="Informe o titulo do álbum">
         </div>
 
         <div class="form-group">
@@ -32,7 +32,7 @@ require 'init.php';
 
         <div class="form-group">
             <label for="qtd">Quantidade de músicas: </label>
-            <input type="text"  class="form-control col-sm" name="qtd" id="qtd" style="widht:25%;" placeholder="Informe o nome do álbum">
+            <input type="text"  class="form-control col-sm" name="qtd" id="qtd" style="widht:25%;" placeholder="Informe a quantidade de músicas do álbum">
         </div>
         <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>

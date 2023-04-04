@@ -25,10 +25,14 @@ $stmt->execute();
                 <section class="jumbotron text-center">
                     <div class="container">
                     <h1 class="jumbotron-heading">Acervo de Discos</h1>
-                    <p class="lead text-muted">Acervo pessoal que possibilita incerção, exibição, edição e exclusão de discos.</p>
+                    <p class="lead text-muted">Tenha um acervo pessoal de álbuns que possibilita incerção, exibição, edição e exclusão de discos.</p>
                     <p>
-                        <a href="form-add.php" class="btn btn-primary my-2">Inserir disco</a>
+                        <a href="form-add.php" class="btn btn-primary my-2">Inserir álbum</a>
                     </p>
+                    <form class="d-flex" role="search">
+                         <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                         <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+                     </form>
                     </div>
                 </section>
                 <?php while ($user = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
@@ -39,18 +43,17 @@ $stmt->execute();
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
                                 <p class="card-text">
-                                    Nome da Banda/ Cantor: <?php echo $user['name'] ?><br>
-                                    Título do Álbum: <?php echo $user['titulo'] ?><br>
-                                    Estilo: <?php echo $user['estilo'] ?><br>
-                                    Quantidade de Músicas: <?php echo $user['qtd'] ?><br>
+                                    Nome da Banda/ Cantor: <br><?php echo $user['name'] ?><br>
+                                    Título do Álbum: <br><?php echo $user['titulo'] ?><br>
+                                    Estilo: <br><?php echo $user['estilo'] ?><br>
+                                    Quantidade de Músicas: <br><?php echo $user['qtd'] ?><br>
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                    <a href="form-edit.php?id=<?php echo $user['id'] ?>" class="btn btn-sm btn-outline-secondary">Editar</a>
-                                    <a href="delete.php?id=<?php echo $user['id'] ?>" class="btn btn-sm btn-outline-secondary">Excluir</a>
+                                    <a href="form-edit.php?id=<?php echo $user['id'] ?>" class="btn btn-sm btn-outline-primary">Editar</a>
+                                    <a href="delete.php?id=<?php echo $user['id'] ?>" class="btn btn-sm btn-outline-primary">Excluir</a>
                                 </div>
                                 </div>
-                        
                         </div>
                     </div>
                     </div>
