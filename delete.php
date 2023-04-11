@@ -8,7 +8,7 @@ if(empty($id))
     exit;
 }
 $PDO = db_connect();
-$sql = "DELETE FROM lly WHERE id = :id";
+$sql = "DELETE FROM discos WHERE id = :id";
 $stmt = $PDO->prepare($sql);
 $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 if ($stmt->execute())

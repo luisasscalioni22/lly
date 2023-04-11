@@ -2,8 +2,8 @@
 require 'init.php';
 
 $PDO = db_connect();
-$sql_count = "SELECT COUNT(*) AS total FROM lly ORDER BY name ASC";
-$sql = "SELECT id, name, titulo, estilo, qtd FROM lly ORDER BY name ASC";
+$sql_count = "SELECT COUNT(*) AS total FROM discos ORDER BY name ASC";
+$sql = "SELECT id, name, titulo, estilo_id, qtd FROM discos ORDER BY name ASC";
 $stmt_count = $PDO->prepare($sql_count);
 $stmt_count->execute();
 $totsl = $stmt_count->fetchColumn();
@@ -16,7 +16,9 @@ $stmt->execute();
         <meta charset="utf-8">
         <title>Acervo de discos</title>
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <script src="bootstrap/js/popper.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
+        <script src="bootstrap/js/jquery.js"></script>
         </style>
         </head>
         <body>
@@ -26,9 +28,28 @@ $stmt->execute();
                     <div class="container">
                     <h1 class="jumbotron-heading">Acervo de Discos</h1>
                     <p class="lead text-muted">Tenha um acervo pessoal de álbuns que possibilita incerção, exibição, edição e exclusão de discos.</p>
-                    <p>
-                        <a href="form-add.php" class="btn btn-primary my-2">Inserir álbum</a>
-                    </p>
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                    </nav>
                     <form class="d-flex" role="search">
                          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
                          <button class="btn btn-outline-primary" type="submit">Pesquisar</button>

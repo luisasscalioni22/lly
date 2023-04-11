@@ -7,7 +7,7 @@ if (empty($id))
     exits;
 }
 $PDO = db_connect();
-$sql = "SELECT name,titulo, estilo, qtd FROM lly WHERE id =:id";
+$sql = "SELECT name,titulo, estilo_id, qtd FROM discos WHERE id =:id";
 $stmt = $PDO->prepare($sql);
 $stmt ->bindParam(':id', $id, PDO::PARAM_INT);
 $stmt->execute();

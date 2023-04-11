@@ -14,7 +14,7 @@ if (empty($name) || empty($titulo_album) || empty($estilo) || empty($qtd_musica)
 }
 
 $PDO = db_connect();
-$sql = "UPDATE lly SET name = :name, titulo = :album, estilo = :estilo, qtd = :qtd WHERE id = :id ";
+$sql = "UPDATE discos SET name = :name, titulo = :album, estilo_id = :estilo, qtd = :qtd WHERE id = :id ";
 $stmt = $PDO->prepare($sql);
 $stmt->bindParam(':name', $name);
 $stmt->bindParam(':album', $titulo_album);
