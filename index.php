@@ -16,40 +16,22 @@ $stmt->execute();
         <meta charset="utf-8">
         <title>Acervo de discos</title>
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-        <script src="bootstrap/js/popper.js"></script>
+        <script src="bootstrap/js/popper.min.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
-        <script src="bootstrap/js/jquery.js"></script>
-        </style>
+        <script src="bootstrap/js/jquery.min.js"></script>
+        <script type="text/javascript">
+                    $(document).ready(function(){
+                        $(function(){
+                            $("#menu").load("navbar.html");
+                         });
+                    });
+                    </script>
         </head>
         <body>
+            <div class="container">
+                <div id="menu"></div>
+            </div>
                 <main role="main">
-
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <div class="container-fluid">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-</svg>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                            </li>
-                        </ul>
-                        </div>
-                    </div>
-                    </nav>
                     <section class="jumbotron text-center">
                     <div class="container">
                     <h1 class="jumbotron-heading">Acervo de Discos</h1>
@@ -70,7 +52,7 @@ $stmt->execute();
                                 <p class="card-text">
                                     Nome da Banda/ Cantor: <br><?php echo $user['name'] ?><br>
                                     Título do Álbum: <br><?php echo $user['titulo'] ?><br>
-                                    Estilo: <br><?php echo $user['estilo'] ?><br>
+                                    Estilo: <br><?php echo $user['estilo_id'] ?><br>
                                     Quantidade de Músicas: <br><?php echo $user['qtd'] ?><br>
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
@@ -93,14 +75,5 @@ $stmt->execute();
                     </p>
                 </div>
                 </footer>
-
-                <!-- Principal JavaScript do Bootstrap
-                ================================================== -->
-                <!-- Foi colocado no final para a página carregar mais rápido -->
-                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-                <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-                <script src="../../assets/js/vendor/popper.min.js"></script>
-                <script src="../../dist/js/bootstrap.min.js"></script>
-                <script src="../../assets/js/vendor/holder.min.js"></script>
             </body>
             </html>

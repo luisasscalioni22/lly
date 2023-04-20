@@ -24,16 +24,23 @@ require 'init.php';
             <label for="album">Título do álbum: </label>
             <input type="text"  class="form-control col-sm" name="album" id="album" style="widht:25%;" placeholder="Informe o titulo do álbum">
         </div>
-
-        <div class="form-group">
-            <label for="estilo">Estilo: </label>
-            <input type="text"  class="form-control col-sm" name="estilo" id="estilo" style="widht:25%;" placeholder="Informe o estilo">
-        </div>
-
         <div class="form-group">
             <label for="qtd">Quantidade de músicas: </label>
             <input type="text"  class="form-control col-sm" name="qtd" id="qtd" style="widht:25%;" placeholder="Informe a quantidade de músicas do álbum">
         </div>
+
+        <div class="form-group">
+                <label for="selectTipo">Selecione o estilo do disco</label>
+                <select class="form-control" name="selectTipo" id="selectTipo" required>
+
+                  <?php while($dados = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+
+                        <option value=" <?php echo $dados['id'] ?> "> <?php echo $dados['descricaoTipo'] ?> </option>
+                      
+                  <?php endwhile; ?>
+
+                </select>
+              </div>
         <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>
     </body>
