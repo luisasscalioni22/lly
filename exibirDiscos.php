@@ -23,8 +23,18 @@ $stmt->execute();
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
         <script src="bootstrap/js/bootstrap.js"></script>
         <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript">
+                    $(document).ready(function(){
+                        $(function(){
+                            $("#menu").load("navbar.html");
+                         });
+                    });
+                    </script>
     </head>
     <body>
+    <div class="container">
+                <div id="menu"></div>
+            </div>
         <div class="container">
             <div class="text-center">
                 <h1>WeBooks</h1>

@@ -25,8 +25,18 @@ if(!is_array($user))
         <title>Edição de Albuns</title>
             <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
             <script src="bootstrap/js/bootstrap.js"></script>
+            <script type="text/javascript">
+                    $(document).ready(function(){
+                        $(function(){
+                            $("#menu").load("navbar.html");
+                         });
+                    });
+                    </script>
     </head>
     <body>
+    <div class="container">
+                <div id="menu"></div>
+            </div>
         <div class="container">
             <h1>Sistema de cadastro de albuns</h1>
             <h2>Edição de Albuns</h2>

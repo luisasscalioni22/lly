@@ -1,5 +1,9 @@
 <?php
 require 'init.php';
+$PDO = db_connect();
+$sql = "SELECT id, descricao FROM estilo ORDER BY descricao ASC";
+$stmt = $PDO->prepare($sql);
+$stmt->execute();
 ?>
 <!doctype html>
 <html>
@@ -8,8 +12,18 @@ require 'init.php';
         <title>Acervo de discos</title>
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
         <script src="bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript">
+                    $(document).ready(function(){
+                        $(function(){
+                            $("#menu").load("navbar.html");
+                         });
+                    });
+                    </script>
     </head>
     <body>
+    <div class="container">
+                <div id="menu"></div>
+            </div>
     <div class="container">
         <h1>Sistema de cadastro de albuns</h1>
         <h2>Cadastro de albuns</h2>
@@ -31,17 +45,17 @@ require 'init.php';
 
         <div class="form-group">
                 <label for="selectTipo">Selecione o estilo do disco</label>
-                <select class="form-control" name="selectTipo" id="selectTipo" required>
+                <select class="form-control" name="estilo" id="estilo" required>
 
                   <?php while($dados = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
 
-                        <option value=" <?php echo $dados['id'] ?> "> <?php echo $dados['descricaoTipo'] ?> </option>
+                        <option value=" <?php echo $dados['id'] ?> "> <?php echo $dados['descricao'] ?> </option>
                       
                   <?php endwhile; ?>
 
                 </select>
-              </div>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
     </div>
     </body>
 </html>
