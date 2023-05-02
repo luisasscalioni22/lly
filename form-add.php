@@ -45,14 +45,10 @@ $stmt->execute();
 
         <div class="form-group">
                 <label for="selectTipo">Selecione o estilo do disco</label>
-                <select class="form-control" name="estilo" id="estilo" required>
-
-                  <?php while($dados = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
-
-                        <option value=" <?php echo $dados['id'] ?> "> <?php echo $dados['descricao'] ?> </option>
-                      
-                  <?php endwhile; ?>
-
+                <select class ="form-control" name ="estilo" id ="estilo_id" required >
+                <?php while ( $estilo = $stmt -> fetch ( PDO :: FETCH_ASSOC)): ?>
+                    <option value =" <?php echo $estilo ['id'] ?> "> <?php echo $estilo ['descricao'] ?> </option>
+                <?php endwhile; ?>
                 </select>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </div>

@@ -36,10 +36,6 @@ $stmt->execute();
                     <div class="container">
                     <h1 class="jumbotron-heading">Acervo de Discos</h1>
                     <p class="lead text-muted">Tenha um acervo pessoal de álbuns que possibilita incerção, exibição, edição e exclusão de discos.</p>
-                    <form class="d-flex" role="search">
-                         <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                         <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
-                     </form>
                     </div>
                 </section>
                 <?php while ($user = $stmt->fetch(PDO::FETCH_ASSOC)): ?>

@@ -22,7 +22,7 @@ $stmt->bindParam(':estilo', $estilo_id);
 $stmt->bindParam(':qtd', $qtd);
 if ($stmt->execute())
 {
-    header('Location: index.php');
+    header('Location: confirma.html');
 
 }
 else
